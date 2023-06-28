@@ -4,36 +4,56 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <link rel="icon" href="public/img/pacman.png">
+        
         <title>GAMING QUIZ</title>
     
-        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
     </head>
+    
+     <style>
+    
+        body { 
+            height: 100vh ;
+            width: 100vw;
+            background-image: url('imagens/feira.jpg');
+            background-position: center center;
+            background-size: cover;
+                
 
+         } 
+
+      
+     </style>
     <body>
-        <video autoplay muted loop id="background-video">
-            <source src="./public/video/videoBackground.mp4" type="video/mp4">
-        </video>
-
+        
         <div class="container">
-            <img onclick="audioPlay()" id="pacManPlay" class="pacMan" src="./public/img/pacman.png">
-            <img onclick="audioPause()" id="pacManPause" class="pacMan" style="display:none" src="./public/img/pacman.png">
+
             <div id="mainBox" class="mainBox">
                 <div id="divInterna">
                     <div id="menuPrincipal">
                         <h1>GAMING QUIZ</h1> 
                         <h2>Teste seu conhecimento em matemática </h2> 
                     </div>
+
+                    <script>
+                        function abrir (){
+                            alerta(' seja bem vindo');
+                        }
+
+
+
+                    </script>
+
                     <div id="divQuestoes" style="display: none">
                         <div id="question1" style="display: none">
                             <div class="headingContainer">
                                 <h1>1 - Quanto é 15x17?</h1>                                                          
                                 </div>
                                 <div class="imageContainer">
-                                    <img id="bulbasaurBlack" class="blackBulba" src="./public/img/bulbasaurCensured.gif">
+                                    <img id="bulbasaurBlack" class="blackBulba">
                                 </div>
                                 <div id="question1Options" class="buttonsContainer">
-                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">300</button>
+                                    <button onClick="questionAnswered(false)" onclick="abrir()" class="optionButton questionButton">300</button>
                                     <button onClick="questionAnswered(false)" class="optionButton questionButton">245</button>
                                     <button onClick="questionAnswered(true)" class="optionButton questionButton">255</button>
                                     <button onClick="questionAnswered(false)" class="optionButton questionButton">200</button>
@@ -41,16 +61,16 @@
                         </div>
                         <div id="question2" style="display: none">
                             <div class="headingContainer">
-                                <h1>2 - Eu tinha 5 balas em casa, Sabrina tinha 28, e Erick tinha 39, quantas balas eles tem juntos ?</h1>
+                                <h1>2 - Em um jogo de tabuleiro, Thaís ganhou 20 pontos na primeira rodada, perdeu 6 pontos na segunda rodada, perdeu 10 pontos na terceira rodada e ganhou 4 pontos na quarta rodada. Qual foi a pontuação de Thaís ao final do jogo?</h1>
                                 </div>
                                 <div class="imageContainer">
-                                    <img id="scorpionMk" src="./public/img/scorpionMk.gif">
+                                    <img id="scorpionMk" >
                                 </div>
                                 <div id="question2Options" class="buttonsContainer">
                                     <button onClick="questionAnswered(false)" class="optionButton questionButton">73</button>
                                     <button onClick="questionAnswered(false)" class="optionButton questionButton">71</button>
                                     <button onClick="questionAnswered(false)" class="optionButton questionButton">75</button>
-                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">72</button>
+                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">7</button>
                             </div>
                         </div>
                         <div id="question3" style="display: none">
@@ -58,7 +78,7 @@
                                 <h1>3 -quanto é 468x29?</h1>
                                 </div>
                                 <div class="imageContainer">
-                                    <img src="./public/img/mario.gif">
+                            
                                 </div>
                                 <div id="question3Options" class="buttonsContainer">
                                     <button onClick="questionAnswered(false)" class="optionButton questionButton">13,571</button>
@@ -72,7 +92,7 @@
                                 <h1>4 - Quanto é 1058x89?</h1>
                                 </div>
                                 <div class="imageContainer">
-                                    <img src="./public/img/codd.gif">
+                                    
                                 </div>
                                 <div id="question4Options" class="buttonsContainer">
                                     <button onClick="questionAnswered(false)" class="optionButton questionButton">94,161</button>
@@ -86,7 +106,7 @@
                                 <h1>5 - Quanto 97x3?</h1>
                                 </div>
                                 <div class="imageContainer">
-                                    <img class="ryu" src="./public/img/ryu.gif">
+                                   
                                 </div>
                                 <div id="question5Options" class="buttonsContainer">
                                     <button onClick="questionAnswered(false)" class="optionButton questionButton">345</button>
@@ -100,7 +120,7 @@
                                 <h1>6 - Na rua, 4 cachorros estavam correndo atrás de uma bola. Que horas são?</h1>
                                 </div>
                                 <div class="imageContainer">
-                                    <img src="./public/img/ah-shit.gif">
+                                    
                                 </div>
                                 <div id="question6Options" class="buttonsContainer">
                                     <button onClick="questionAnswered(true)" class="optionButton questionButton">12:56</button>
@@ -114,7 +134,7 @@
                                 <h1>7 - João tem 18 anos. Se ele nascesse 8 anos atrás, ele teria quantos anos?</h1>
                                 </div>
                                 <div class="imageContainer2">
-                                    <img class="miranha" src="./public/img/spiderman.gif">
+                                    
                                 </div>
                                 <div id="question7Options" class="buttonsContainer">
                                     <button onClick="questionAnswered(false)" class="optionButton questionButton">10</button>
@@ -128,7 +148,7 @@
                                 <h1>8 - Pedro olhou para seu despertador e disse que daqui a seis horas e meia seriam quatro horas da manhã. A que horas Pedro olhou para o despertador?</h1>
                                 </div>
                                 <div class="imageContainer">
-                                    <img src="./public/img/claptrap-borderlands.gif">
+                                    
                                 </div>
                                 <div id="question8Options" class="buttonsContainer">
                                     <button onClick="questionAnswered(false)" class="optionButton questionButton">21h</button>
@@ -154,7 +174,7 @@
                                 <h1>10 - Um garoto estava brincando com um livro e arrancou as páginas 6, 8, 84, 85, 111 e 112. Quantas folhas ele arrancou?</h1>
                                 </div>
                                 <div class="imageContainer2">
-                                    <img class="speed" src="./public/img/speed.gif">
+                                    
                                 </div>
                                 <div id="question10Options" class="buttonsContainer">
                                     <button onClick="questionAnswered(false)" class="optionButton questionButton">7</button>
@@ -165,9 +185,10 @@
                         </div>
                     </div>
                     <div id="divQuizFinalizado" style="display: none">
-                        <p>Sua pontuação: ${score}</p>
+                        <h1>Sua pontuação: ${score}</h1>
                         <br>
                         <button onclick="reloadPage()" class="optionButton questionButton">Menu Principal</button>
+                        <button onclick="saveScore()" class="optionButton questionButton">Salvar Recorde</button>
                     </div>
                     <div id="divInstrucoes" style="display: none">
                         <h1>Instruções</h1>
@@ -183,18 +204,22 @@
                         </ol>
                         <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
                     </div>
+        
+                    
+
+ 
                     <div id= "divCreditos" style="display: none">
                         <h1>Créditos</h1>
                         <h2 class="groupNames">Integrantes do Grupo:</h2>
                                 <p class="pName"> <a href="Pedro Prudenci target="_blank">Pedro Prudencio </a></p>
                                 <p class="pName"> <a href="lorenzo Carvalhosa target="_blank">lorenzo Carvalhosa</a></p>
-                                <p class="pName"> <a href="Guilherme lucio target="_blank">Guilherme lucio </a></p>
+                                <p class="pName"> <a href="Guilherme lucio target="_blank">Guilherme </a></p>
+								   <p class="pName"> <a href="Guilherme lucio target="_blank">jean Carvalho </a></p>
                             
                         <h2 class= >Instituição:</h2>
                             <p class="infoUni">Escola santa luzia </p>
                         <h2>Professores:</h2>                
-                            <p>Bira</p>
-                            <p>Máriana </p>
+                            <p>Urubatan de Moura souza</p>
                             <br>
                             <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
                     </div>
