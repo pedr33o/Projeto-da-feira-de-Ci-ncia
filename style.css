@@ -39,40 +39,40 @@ body{
     inset 0 0 0.5vw 0.2vw rgb(205, 208, 151);
     padding: 30px 60px;
     border-radius: 8px;  
-    background-color: #ffffff10;
+    background-color: #000000fd;
     transition: all 0.1s;
 }
 
 .mainBox:hover{
     content: normal;
-    color: #0e0909;
-    border: 5px solid #01798f;
+    color: #f7f7f7;
+    border: 5px solid #ffffff;
     box-shadow: 
-    0 0 0.1vw 0.4vw #01798f,
-    0 0 0.4vw 0.6vw #fffbfb,
+    0 0 0.1vw 0.4vw #ffffff,
+    0 0 0.4vw 0.6vw #ffffff,
     0 0 4vw 0.4vw #01798f,
     
-    inset 0 0 0.5vw 0.125vw #0a0808,
-    inset 0 0 0.1vw 0.075vw #000000,
-    inset 0 0 0.1vw 0.075vw #080707;    
+    inset 0 0 0.5vw 0.125vw #ffffff,
+    inset 0 0 0.1vw 0.075vw #ffffff,
+    inset 0 0 0.1vw 0.075vw #ffffff;    
     transition: all 0.1s;
 }
 
 .optionButton{
-    color: #000000;
-    background-color: #ffffff30;
+    color: #028d25;
+    background-color: #000000;
     font-size: 12pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 8px;
     border: 3px solid #b9bc94;
     box-shadow: 
-    0 0 0.1vw 0.4vw #cdd097,
-    0 0 0.4vw 0.6vw #bdc546,
-    0 0 4vw 0.4vw #c0c003,
+    0 0 0.1vw 0.4vw #119100,
+    0 0 0.4vw 0.6vw #059900,
+    0 0 4vw 0.4vw #13c003,
     
-    inset 0 0 0.5vw 0.125vw #c0c003,
-    inset 0 0 0.1vw 0.075vw #bdc546,
-    inset 0 0 0.1vw 0.075vw #cdd097;    
+    inset 0 0 0.5vw 0.125vw #008607,
+    inset 0 0 0.1vw 0.075vw #508a06,
+    inset 0 0 0.1vw 0.075vw #428107;    
     margin-top: 35px;
     width: 200px;
     height: 60px;
@@ -266,8 +266,3 @@ a {
 .ryu{
     height: 225px;
 }
-
-
-
-
-
