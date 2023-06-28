@@ -11,6 +11,7 @@ var divInstrucoes = document.getElementById('divInstrucoes');
 var bulbasaurBlack = document.getElementById('bulbasaurBlack');
 var scorpionMk = document.getElementById('scorpionMk');
 
+
 var question1Options = document.getElementById('question1Options').querySelectorAll('.questionButton');
 var question2Options = document.getElementById('question2Options').querySelectorAll('.questionButton');
 var question3Options = document.getElementById('question3Options').querySelectorAll('.questionButton');
@@ -38,6 +39,8 @@ var question10 = document.getElementById('question10');
 
 var question = 1;
 var score = 0;
+var record = localStorage.getItem('record') || 0; // Retrieve record from localStorage
+
 
 // Html das questões
 function renderQuestion(){
@@ -47,7 +50,7 @@ function renderQuestion(){
     divInstrucoes.style.display = 'none';
     divCreditos.style.display = 'none';
     divQuestoes.style.display = 'block';
-
+   
     switch (question){
         case 1:
             // Q1
@@ -104,12 +107,21 @@ function renderQuestion(){
             divQuizFinalizado.style.display = "block";
             divQuizFinalizado.innerHTML = 
             `
-                <p>Sua pontuação: ${score}</p>
-                <br>
-                <button onclick="reloadPage()" class="optionButton questionButton">Menu Principal</button>
+            <p>Sua pontuação: ${score}</p>
+            <p>Recorde atual: ${record}</p>
+            <br>
+            <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
+            <button onclick="saveScore()" class="optionButton questionButton">Salvar Recorde</button>
             `
-        break;
+             
+            
+
     }
+
+    
+            i
+    
+
     console.log(`question: ${question}`);
     console.log(`score: ${score}`);
 }
@@ -187,7 +199,7 @@ function questionAnswered(correct){
     switch (question){
         case 1:
 
-            bulbasaurBlack.src = './public/img/bulbasaurPokemon.gif';
+            
 
             question1Options[0].classList.add('optionButtonWrong');
             question1Options[0].disabled = true
@@ -200,7 +212,7 @@ function questionAnswered(correct){
         break;
         case 2:
 
-            scorpionMk.src = './public/img/toastyMk.gif';
+            
             toastyMk.play();
 
             question2Options[0].classList.add('optionButtonWrong');
@@ -330,3 +342,30 @@ function reloadPage(){
     document.location.reload();
 }
 loadQuestion();
+
+function saveScore() {
+    var playerName = prompt("Parabéns! Você fez " + score + " ponto(s). Digite seu nome para salvar seu recorde:");
+    var playerScore = {
+        name: playerName,
+        score: score
+    };
+
+    var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    highScores.push(playerScore);
+    highScores.sort((a, b) => b.score - a.score);
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    alert("Seu recorde foi salvo com sucesso!");
+    reloadPage();
+}
+
+function reloadPage() {
+    location.reload();
+}
+
+
+
+
+
+
+
+
